@@ -9,9 +9,7 @@ parser = argparse.ArgumentParser(description='Arguments for reporting')
 parser.add_argument("--base", default=None, type=str, help="Your base country (eg. Belgium)", required=True)
 parser.add_argument("--year", default=None, type=int, help="Year of report (eg. 2019)", required=True)
 
-
 args = parser.parse_args()
-
 
 YEAR = args.year
 BASE_COUNTRY = args.base
@@ -20,11 +18,7 @@ print('📊 Report for %s (base country is "%s")' % (YEAR, BASE_COUNTRY))
 print()
 print("⏳ Processing...")
 
-
 Point = namedtuple('Point', 'latitude, longitude, datetime')
-
-
-
 
 def read_points():
     with open('data.json') as f:
@@ -60,7 +54,6 @@ for point in points:
 
         if len(trips) > 1:
             trips[-2]["duration"] = duration # Duration of previous trip
-
 
 print("✅ Done.")
 print()
