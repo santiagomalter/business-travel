@@ -1,5 +1,5 @@
 # (1) Setup
-1. Checkout the repository
+1. Clone the repository
 2. Create an env and activate it
 
 ```
